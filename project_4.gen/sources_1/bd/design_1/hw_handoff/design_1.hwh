@@ -1,0 +1,67 @@
+﻿<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Sun Jan 23 05:53:54 2022" VIVADOVERSION="2021.2">
+
+  <SYSTEMINFO ARCH="spartan7" BOARD="digilentinc.com:arty-s7-25:part0:1.0" DEVICE="7s25" NAME="design_1" PACKAGE="csga324" SPEEDGRADE="-1"/>
+
+  <EXTERNALPORTS/>
+
+  <EXTERNALINTERFACES/>
+
+  <MODULES>
+    <MODULE COREREVISION="1" FULLNAME="/clock_0" HWVERSION="1.0" INSTANCE="clock_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="clock" VLNV="xilinx.com:module_ref:clock:1.0">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="Component_Name" VALUE="design_1_clock_0_1"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT DIR="O" LEFT="15" NAME="address" RIGHT="0" SIGIS="undef" SIGNAME="clock_0_address">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="top_0" PORT="address"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="RD" SIGIS="undef" SIGNAME="clock_0_RD">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="top_0" PORT="nRD"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT CLKFREQUENCY="100000000" DIR="O" NAME="clk" SIGIS="clk" SIGNAME="clock_0_clk">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="top_0" PORT="clk"/>
+          </CONNECTIONS>
+        </PORT>
+      </PORTS>
+      <BUSINTERFACES/>
+    </MODULE>
+    <MODULE COREREVISION="1" FULLNAME="/top_0" HWVERSION="1.0" INSTANCE="top_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="top" VLNV="xilinx.com:module_ref:top:1.0">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="Component_Name" VALUE="design_1_top_0_0"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT DIR="I" LEFT="15" NAME="address" RIGHT="0" SIGIS="undef" SIGNAME="clock_0_address">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="clock_0" PORT="address"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="IO" LEFT="7" NAME="data" RIGHT="0" SIGIS="undef"/>
+        <PORT DIR="I" NAME="nWR" SIGIS="undef"/>
+        <PORT DIR="I" NAME="nRD" SIGIS="undef" SIGNAME="clock_0_RD">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="clock_0" PORT="RD"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="nCS" SIGIS="undef"/>
+        <PORT DIR="O" NAME="OE" SIGIS="undef"/>
+        <PORT CLKFREQUENCY="100000000" DIR="I" NAME="clk" SIGIS="clk" SIGNAME="clock_0_clk">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="clock_0" PORT="clk"/>
+          </CONNECTIONS>
+        </PORT>
+      </PORTS>
+      <BUSINTERFACES/>
+    </MODULE>
+  </MODULES>
+
+</EDKSYSTEM>

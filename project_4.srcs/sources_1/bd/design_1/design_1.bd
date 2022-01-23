@@ -1,0 +1,110 @@
+{
+  "design": {
+    "design_info": {
+      "boundary_crc": "0x0",
+      "device": "xc7s25csga324-1",
+      "gen_directory": "../../../../project_4.gen/sources_1/bd/design_1",
+      "name": "design_1",
+      "rev_ctrl_bd_flag": "RevCtrlBdOff",
+      "synth_flow_mode": "Hierarchical",
+      "tool_version": "2021.2",
+      "validated": "true"
+    },
+    "design_tree": {
+      "clock_0": "",
+      "top_0": ""
+    },
+    "components": {
+      "clock_0": {
+        "vlnv": "xilinx.com:module_ref:clock:1.0",
+        "xci_name": "design_1_clock_0_1",
+        "xci_path": "ip\\design_1_clock_0_1\\design_1_clock_0_1.xci",
+        "inst_hier_path": "clock_0",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "clock",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "address": {
+            "direction": "O",
+            "left": "15",
+            "right": "0"
+          },
+          "RD": {
+            "direction": "O"
+          },
+          "clk": {
+            "type": "clk",
+            "direction": "O"
+          }
+        }
+      },
+      "top_0": {
+        "vlnv": "xilinx.com:module_ref:top:1.0",
+        "xci_name": "design_1_top_0_0",
+        "xci_path": "ip\\design_1_top_0_0\\design_1_top_0_0.xci",
+        "inst_hier_path": "top_0",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "top",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "address": {
+            "direction": "I",
+            "left": "15",
+            "right": "0"
+          },
+          "data": {
+            "direction": "IO",
+            "left": "7",
+            "right": "0"
+          },
+          "nWR": {
+            "direction": "I"
+          },
+          "nRD": {
+            "direction": "I"
+          },
+          "nCS": {
+            "direction": "I"
+          },
+          "OE": {
+            "direction": "O"
+          },
+          "clk": {
+            "type": "clk",
+            "direction": "I",
+            "parameters": {
+              "CLK_DOMAIN": {
+                "value": "design_1_clock_0_1_clk",
+                "value_src": "default_prop"
+              }
+            }
+          }
+        }
+      }
+    },
+    "nets": {
+      "clock_0_RD": {
+        "ports": [
+          "clock_0/RD",
+          "top_0/nRD"
+        ]
+      },
+      "clock_0_address": {
+        "ports": [
+          "clock_0/address",
+          "top_0/address"
+        ]
+      },
+      "clock_0_clk": {
+        "ports": [
+          "clock_0/clk",
+          "top_0/clk"
+        ]
+      }
+    }
+  }
+}

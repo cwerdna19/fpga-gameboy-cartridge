@@ -1,0 +1,17 @@
+{
+   "ActiveEmotionalView":"Default View",
+   "Default View_ScaleFactor":"1.0",
+   "Default View_TopLeft":"-932,-267",
+   "ExpandedHierarchyInLayout":"",
+   "guistr":"# # String gsaved with Nlview 7.0r6  2020-01-29 bk=1.5227 VDI=41 GEI=36 GUI=JA:10.0 non-TLS
+#  -string -flagsOSRD
+preplace inst clock_0 -pg 1 -lvl 1 -x -500 -y -30 -defaultsOSRD
+preplace inst top_0 -pg 1 -lvl 2 -x -160 -y -10 -defaultsOSRD
+preplace netloc clock_0_RD 1 1 1 -380 -30n
+preplace netloc clock_0_address 1 1 1 N -50
+preplace netloc clock_0_clk 1 1 1 -390 -10n
+levelinfo -pg 1 -620 -500 -160 -20
+pagesize -pg 1 -db -bbox -sgen -620 -210 -20 200
+"
+}
+0
